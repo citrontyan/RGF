@@ -1,0 +1,10 @@
+[project]
+name = "rgf"
+version = "0.1.0"
+description = "Recursive Generative Framework for Edge-Cut Separable Problems"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

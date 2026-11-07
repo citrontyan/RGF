@@ -1,0 +1,9 @@
+# Line-ending policy.
+#
+# This machine runs Git for Windows with core.autocrlf=true, which rewrites LF
+# to CRLF on checkout.  The build scripts are executed by WSL bash, where a
+# trailing CR is a syntax error ("\r: command not found"), so they must be
+# checked out with LF.  Windows-only scripts keep CRLF.
+*.sh  text eol=lf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf

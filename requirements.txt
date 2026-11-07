@@ -1,0 +1,22 @@
+# RGF experiment environment (Windows, Python 3.14.7)
+#
+# Base interpreter: D:\pythons\python3.14.1  (that directory is Python 3.14.7)
+# Virtualenv:       .venv
+#
+# torch must come from the PyTorch CUDA wheel index (PyPI's Windows torch
+# wheels are CPU-only).  Install order matters:
+#
+#   .venv\Scripts\python.exe -m pip install ^
+#       --index-url https://download.pytorch.org/whl/cu130 ^
+#       --extra-index-url https://repo.huaweicloud.com/repository/pypi/simple ^
+#       torch==2.14.0
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+#
+# CUDA 13.0 wheels match this workstation's driver (CUDA UMD 13.3).
+torch==2.14.0
+numpy
+scipy
+networkx
+torch-geometric
+pytest
+tqdm
